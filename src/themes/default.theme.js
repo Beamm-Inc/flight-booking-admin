@@ -1,0 +1,15 @@
+export default {
+  primary: '#107abe',
+  lightBlue: '#89d5ff',
+  primaryDark: '#388E3C',
+  secondary: '#ebebeb',
+  accent: '#0288D1',
+  error: '#f44336',
+  warning: '#ffeb3b',
+  info: '#2196f3',
+  success: '#FF5722',
+  navbarColor: '#FFFFFF',
+  sidebarColor: '#f5f5f5',
+  green: '#44bb4b',
+  purple: '#6d60b6',
+};
