@@ -24,9 +24,6 @@ import router from "./router";
 import store from "./store";
 import "./registerServiceWorker";
 
-// Load Noto Sans Ethiopic typeface
-import "./assets/noto-sans-ethiopic/index.css";
-
 Vue.use(VueQuillEditor);
 Vue.use(Notify, {
   horizontalAlign: "center",
