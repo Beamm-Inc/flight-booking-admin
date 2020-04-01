@@ -10,7 +10,6 @@ export {
   AuthAPI,
   UserAccountAPI,
   UserAPI,
-  RequestAPI,
   AirplaneAPI,
   RoleAPI
 };
