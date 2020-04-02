@@ -146,7 +146,7 @@
 </template>
 
 <script>
-import { UserAccountAPI, BankAPI } from "@/api";
+import { UserAccountAPI } from "@/api";
 import AccountService from "@/services";
 
 export default {
@@ -157,13 +157,6 @@ export default {
       item: {},
       account: {}
     };
-  },
-  created() {
-    BankAPI.account().then(res => {
-      if(res.data && res.data.length > 0){
-        this.account = res.data[0];
-      }
-    });
   },
   methods: {
     update() {
