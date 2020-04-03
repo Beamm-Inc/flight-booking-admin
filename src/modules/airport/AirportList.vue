@@ -6,7 +6,7 @@
       <v-layout>
         <v-flex xs12>
           <div class="headline font-weight-thin">
-            Airplanes
+            Airports
           </div>
         </v-flex>
       </v-layout>
@@ -24,10 +24,10 @@
               <v-btn
                 color="primary"
                 class="pa-0 pl-2 pr-3"
-                @click="$router.push({ name: 'airplane-create' })"
+                @click="$router.push({ name: 'airport-create' })"
               >
                 <v-icon class="mr-1">add_circle_outline</v-icon>
-                New Airplane
+                New Airport
               </v-btn>
               <v-spacer />
               <v-flex 
@@ -49,19 +49,17 @@
               :pagination.sync="pagination"
               :loading="loading"
               :search="search"
-              rows-per-page-text="People per page"
+              rows-per-page-text="Airport per page"
             >
               <template 
                 slot="items" 
                 slot-scope="props">
                 <tr 
                   style="cursor: pointer" 
-                  @click="airplaneDetail(props.item)">
-                  <td>{{ props.item.airplaneSerialNumber }}</td>
-                  <td>{{ props.item.airplaneModel }}</td>
-                  <td>{{ props.item.firstClassSeats }}</td>
-                  <td>{{ props.item.businessClassSeats }}</td>
-                  <td>{{ props.item.economyClassSeats }}</td>
+                  @click="airportDetail(props.item)">
+                  <td>{{ props.item.airportName }}</td>
+                  <td>{{ props.item.airportCode }}</td>
+                  <td>{{ props.item.airportCity }}</td>
                   <td @click.stop>
                     <v-menu 
                       offset-x 
@@ -78,8 +76,8 @@
                           ripple
                           @click="
                             $router.push({
-                              name: 'airplane-update',
-                              params: { airplaneId: props.item.airplaneID }
+                              name: 'airport-update',
+                              params: { airportId: props.item.airportID }
                             })
                           "
                         >
@@ -90,7 +88,7 @@
                         </v-list-tile>
                         <v-list-tile 
                           ripple 
-                          @click="deleteItem(props.item.airplaneID)">
+                          @click="deleteItem(props.item.airportID)">
                           <v-list-tile-action>
                             <v-icon>delete</v-icon>
                           </v-list-tile-action>
@@ -118,38 +116,30 @@
 </template>
 
 <script>
-import { AirplaneAPI } from "@/api";
+import { AirportAPI } from "@/api";
 import { tableMixin } from "@/shared/mixins";
-import AirplaneDetail from "./AirplaneDetail.vue";
+import AirportDetail from "./AirportDetail.vue";
 
 export default {
-  name: "AirplaneList",
+  name: "AirportList",
   mixins: [tableMixin],
 
   data() {
     return {
-      resource: AirplaneAPI,
-      resourceName: "Airplane",
+      resource: AirportAPI,
+      resourceName: "Airport",
       headers: [
         {
-          text: "Serial Number",
-          value: "airplaneSerialNumber"
+          text: "Name",
+          value: "airportName"
         },
         {
-          text: "Model",
-          value: "airplaneModel"
+          text: "Code",
+          value: "airportCode"
         },
         {
-          text: "First Class Seats",
-          value: "firstClassSeats"
-        },
-        {
-          text: "Business Class Seats",
-          value: "businessClassSeats"
-        },
-        {
-          text: "Economy Class Seats",
-          value: "economyClassSeats"
+          text: "City",
+          value: "airportCity"
         },
         {
           text: "Actions",
@@ -160,15 +150,15 @@ export default {
     };
   },
   methods: {
-    airplaneDetail(airplane) {
+    airportDetail(airport) {
       this.$modal.show(
-        AirplaneDetail,
+        AirportDetail,
         {
-          modalName: "airplane-detail-modal",
-          item: airplane
+          modalName: "airport-detail-modal",
+          item: airport
         },
         {
-          name: "airplane-detail-modal",
+          name: "airport-detail-modal",
           height: "auto",
           scrollable: true,
           width: 800
