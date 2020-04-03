@@ -2,7 +2,8 @@ import AuthAPI from "./auth.api";
 import UserAccountAPI from "./user-account.api";
 import UserAPI from "./user.api";
 import RoleAPI from "./role.api";
-import AirplaneAPI from "./airplane.api"
+import AirplaneAPI from "./airplane.api";
+import AirportAPI from "./airport.api";
 
 const API_ROOT = process.env.VUE_APP_API_ROOT;
 export {
@@ -11,5 +12,6 @@ export {
   UserAccountAPI,
   UserAPI,
   AirplaneAPI,
+  AirportAPI,
   RoleAPI
 };

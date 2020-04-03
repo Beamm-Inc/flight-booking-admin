@@ -80,8 +80,13 @@ export default {
           route: "airplane-list"
         },
         {
+          title: "Airports",
+          icon: "business",
+          route: "airport-list"
+        },
+        {
           title: "Flights",
-          icon: "schedule",
+          icon: "flight_takeoff",
           children: [
             {
               title: "All",
