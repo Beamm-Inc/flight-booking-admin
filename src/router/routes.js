@@ -5,6 +5,7 @@ import NotFoundPage from "@/components/NotFoundPage.vue";
 import accountRoutes from "@/modules/account/account.routes";
 import userRoutes from "@/modules/user/user.routes";
 import airplaneRoutes from "@/modules/airplane/airplane.routes";
+import airportRoutes from "@/modules/airport/airport.routes";
 
 const routes = [
   {
@@ -17,7 +18,8 @@ const routes = [
     children: [
       ...accountRoutes,
       ...userRoutes,
-      ...airplaneRoutes
+      ...airplaneRoutes,
+      ...airportRoutes
     ]
   },
   {

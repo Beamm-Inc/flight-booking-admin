@@ -6,17 +6,13 @@
         primary-title 
         class="primary--text text--darken-3">
         <div>
-          <div class="headline">{{ item.airplaneModel }}</div>
-          <span>{{ item.airplaneSerialNumber }}</span>
+          <div class="headline">{{ item.airportName }}</div>
+          <span>Code - {{ item.airportCode }}</span>
         </div>
       </v-card-title>
       <v-divider light />
       <v-card-text>
-        First Class - {{ item.firstClassSeats }} Seats
-       <v-divider />
-        Business Class - {{ item.businessClassSeats }} Seats
-        <v-divider />
-        Economy Class - {{ item.economyClassSeats }} Seats
+        City - {{ item.airportCity }} 
       </v-card-text>
       <v-card-actions class="pa-3">
         <v-spacer />
@@ -34,7 +30,7 @@
 
 <script>
 export default {
-  name: "AirplaneDetail",
+  name: "AirportDetail",
   props: {
     modalName: {
       type: String,
@@ -52,8 +48,8 @@ export default {
     edit() {
       this.$modal.hide(this.modalName);
       this.$router.push({
-        name: "airplane-update",
-        params: { airplaneId: this.item.airplaneID }
+        name: "airport-update",
+        params: { airportId: this.item.airportID }
       });
     }
   }
