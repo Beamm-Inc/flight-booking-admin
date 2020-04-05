@@ -6,6 +6,8 @@ import accountRoutes from "@/modules/account/account.routes";
 import userRoutes from "@/modules/user/user.routes";
 import airplaneRoutes from "@/modules/airplane/airplane.routes";
 import airportRoutes from "@/modules/airport/airport.routes";
+import flightRoutes from "@/modules/flight/flight.routes";
+import sheduledflightRoutes from "@/modules/scheduledflight/scheduledflight.routes";
 
 const routes = [
   {
@@ -19,7 +21,9 @@ const routes = [
       ...accountRoutes,
       ...userRoutes,
       ...airplaneRoutes,
-      ...airportRoutes
+      ...airportRoutes,
+      ...flightRoutes,
+      ...sheduledflightRoutes
     ]
   },
   {
