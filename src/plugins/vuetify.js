@@ -39,6 +39,7 @@ import {
   VBottomSheet,
   VSubheader,
   VSnackbar,
+  VAutocomplete,
   transitions
 } from "vuetify";
 import "vuetify/dist/vuetify.min.css";
@@ -87,6 +88,7 @@ Vue.use(Vuetify, {
     VBottomSheet,
     VSubheader,
     VSnackbar,
+    VAutocomplete,
     transitions
   }
 });

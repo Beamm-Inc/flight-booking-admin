@@ -89,16 +89,12 @@ export default {
           icon: "flight_takeoff",
           children: [
             {
-              title: "All",
-              route: "pending-request-list"
+              title: "Flight Routes",
+              route: "flight-list"
             },
             {
-              title: "Postponed",
-              route: "accepted-request-list"
-            },
-            {
-              title: "Canceled",
-              route: "declined-request-list"
+              title: "Scheduled Flights",
+              route: "scheduledflight-list"
             }
           ]
         },      
