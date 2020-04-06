@@ -59,7 +59,7 @@
                   @click="flightDetail(props.item)">
                   <td>{{ props.item.flightNumber }}</td>
                   <td>{{ props.item.origin && props.item.origin.airportCity + " - " + props.item.origin.airportName }}</td>
-                  <td>{{ props.item.origin && props.item.origin.airportCity + " - " + props.item.origin.airportName }}</td>
+                  <td>{{ props.item.destination && props.item.destination.airportCity + " - " + props.item.destination.airportName }}</td>
                   <td @click.stop>
                     <v-menu 
                       offset-x 
