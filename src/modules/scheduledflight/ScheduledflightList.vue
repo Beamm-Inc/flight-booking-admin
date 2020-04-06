@@ -59,7 +59,7 @@
                   @click="scheduledflightDetail(props.item)">
                   <td>{{ props.item.flight && props.item.flight.flightNumber }}</td>
                   <td>{{ props.item.flight && props.item.flight.origin && props.item.flight.origin.airportCity + " - " + props.item.flight.origin.airportName }}</td>
-                  <td>{{ props.item.flight && props.item.flight.origin && props.item.flight.origin.airportCity + " - " + props.item.flight.origin.airportName }}</td>
+                  <td>{{ props.item.flight && props.item.flight.destination && props.item.flight.destination.airportCity + " - " + props.item.flight.destination.airportName }}</td>
                   <td>{{ props.item.departureDate }}</td>
                   <td>{{ props.item.arrivalDate }}</td>
                   <td>{{ props.item.airplane && props.item.airplane.airplaneModel }}</td>
