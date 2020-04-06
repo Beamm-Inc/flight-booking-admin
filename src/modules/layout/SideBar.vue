@@ -70,11 +70,6 @@ export default {
       admins: [["Management", "people_outline"], ["Settings", "settings"]],
       menus: [
         {
-          title: "Users",
-          icon: "people",
-          route: "user-list"
-        },
-        {
           title: "Airplanes",
           icon: "flight",
           route: "airplane-list"
@@ -97,6 +92,11 @@ export default {
               route: "scheduledflight-list"
             }
           ]
+        },
+        {
+          title: "Users",
+          icon: "people",
+          route: "user-list"
         },      
       ]
     };

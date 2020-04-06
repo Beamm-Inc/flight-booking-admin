@@ -12,7 +12,7 @@ import sheduledflightRoutes from "@/modules/scheduledflight/scheduledflight.rout
 const routes = [
   {
     path: "/",
-    redirect: "/app/users"
+    redirect: "/app/airplanes"
   },
   {
     path: "/app",
