@@ -41,7 +41,7 @@
     "babel-jest": "^23.0.1",
     "babel-plugin-transform-imports": "^1.4.1",
     "commitizen": "^2.10.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^7.0.0",
     "npx": "^10.2.0",
     "sass-loader": "^7.0.1",
     "stylus": "^0.54.5",
